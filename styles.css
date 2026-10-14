@@ -59,8 +59,7 @@ p,h1,h2,h3{margin-top:0}
 .eyebrow-dot{width:9px;height:9px;border-radius:50%;background:var(--accent);flex:none}
 .eyebrow-index{font-size:9px;margin-left:10px;color:#9ca2a8}
 .hero h1{font:800 clamp(59px,6.55vw,94px)/1.02 var(--display);letter-spacing:-.072em;margin:0 0 24px;overflow-wrap:normal}
-.headline-yellow{color:var(--ink);position:relative;white-space:nowrap}
-.headline-yellow:after{content:"";position:absolute;left:2px;right:0;bottom:2px;height:12px;background:rgba(244,204,52,.55);z-index:-1;border-radius:5px}
+.headline-yellow{color:var(--ink);white-space:nowrap;background:linear-gradient(to top,rgba(244,204,52,.45) 24%,transparent 24%)}
 .hero-subtitle{max-width:560px;font-size:clamp(18px,1.8vw,22px);line-height:1.54;font-weight:700;letter-spacing:-.02em;margin:0 0 15px}
 .hero-small{font-size:13px;line-height:1.95;color:#717983;max-width:530px;margin:0 0 29px}
 .hero-small strong{color:var(--ink)}
@@ -335,7 +334,7 @@ p,h1,h2,h3{margin-top:0}
  .eyebrow{font-size:9px;gap:8px;letter-spacing:.06em;margin-bottom:21px}
  .eyebrow-index{margin-left:auto;font-size:8px}
  .hero h1{font-size:clamp(48px,12vw,69px);line-height:1.07;letter-spacing:-.065em;margin-bottom:20px}
- .headline-yellow:after{height:8px;bottom:1px}
+ 
  .hero-subtitle{font-size:17px;line-height:1.53;margin-bottom:14px}
  .hero-small{font-size:12px;line-height:1.93;margin-bottom:23px}
  .hero-buttons{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px}
