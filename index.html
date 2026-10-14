@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f8f7f2">
+  <meta name="description" content="Гайд команды #СуперГерои: как приглашать людей в Greenway. Готовые скрипты, голосовые сообщения, возражения, формула приглашения и план на 7 дней.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="#СуперГерои — Гайд по приглашениям">
+  <meta property="og:description" content="Сильные приглашения без давления. 10 модулей, готовые скрипты и практика для команды Greenway.">
+  <title>Гайд по приглашениям — #СуперГерои × Greenway</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="m13 2-9 11h7l-1 9 10-12h-7l1-8Z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M5 5 19 19M19 5 5 19"/></symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="13" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v5m-4 0h8"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 6a9 9 0 0 0-9-2v15a9 9 0 0 1 9 2 9 9 0 0 1 9-2V4a9 9 0 0 0-9 2Zm0 0v15"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5 9 9 0 0 1-4.2-1L3 21l1.8-5.3A8.5 8.5 0 1 1 21 11.5Z"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4m10-4v4M3 10h18"/></symbol>
+    <symbol id="i-light" viewBox="0 0 24 24"><path d="M9 18h6m-5 3h4m-4-6a7 7 0 1 1 4 0c-1 .6-1 1.2-1 3h-2c0-1.8 0-2.4-1-3Z"/></symbol>
+    <symbol id="i-print" viewBox="0 0 24 24"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v7H6z"/></symbol>
+    <symbol id="i-headset" viewBox="0 0 24 24"><path d="M3 14v-3a9 9 0 0 1 18 0v3M6 18H5a2 2 0 0 1-2-2v-3h5v5H6Zm12 0h1a2 2 0 0 0 2-2v-3h-5v5h2Z"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#content">Перейти к материалу</a>
+  <div class="top-progress" aria-hidden="true"><div id="reading-progress"></div></div>
+
+  <header class="site-header">
+    <div class="header-inner shell">
+      <a href="#top" class="brand" aria-label="СуперГерои — наверх">
+        <span class="brand-mark"><svg class="icon"><use href="#i-bolt"></use></svg></span>
+        <span class="brand-name">#СУПЕР<span>ГЕРОИ</span><small>TEAM EDUCATION</small></span>
+      </a>
+      <div class="header-center">GREENWAY <span class="header-cross">✳</span> ПРАКТИЧЕСКИЙ ГАЙД</div>
+      <div class="header-actions">
+        <button class="icon-button print-button" type="button" id="print-guide" title="Сохранить в PDF или распечатать" aria-label="Сохранить в PDF"><svg class="icon"><use href="#i-print"></use></svg></button>
+        <a class="top-cta" href="#formula">К ОБУЧЕНИЮ <svg class="icon"><use href="#i-up"></use></svg></a>
+        <button class="icon-button mobile-menu-button" type="button" id="mobile-menu-button" aria-label="Открыть содержание" aria-controls="mobile-menu" aria-expanded="false"><svg class="icon"><use href="#i-menu"></use></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <div class="mobile-menu-head"><span>СОДЕРЖАНИЕ <small>10 РАЗДЕЛОВ</small></span><button class="icon-button" id="close-mobile-menu" type="button" aria-label="Закрыть содержание"><svg class="icon"><use href="#i-x"></use></svg></button></div>
+    <nav class="mobile-menu-list" aria-label="Мобильное содержание">
+      <a href="#philosophy"><b>01</b> Главный принцип</a><a href="#formula"><b>02</b> Формула приглашения</a><a href="#voice"><b>03</b> Голосовые скрипты</a><a href="#messages"><b>04</b> Первое сообщение</a><a href="#start"><b>05</b> Если ты новичок</a><a href="#objections"><b>06</b> Ответы на возражения</a><a href="#route"><b>07</b> Путь человека</a><a href="#plan"><b>08</b> Практика на 7 дней</a><a href="#checklist"><b>09</b> Чек-лист</a><a href="#final"><b>10</b> Философия команды</a>
+    </nav>
+    <div class="mobile-menu-foot">СИЛЬНЫЕ ЛЮДИ. СИЛЬНАЯ КОМАНДА.</div>
+  </div>
+
+  <main id="content">
+    <section id="top" class="hero shell">
+      <div class="hero-grain" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> МЕТОДИЧКА ДЛЯ ПАРТНЁРОВ <span class="eyebrow-index">EDITION 01 / 2026</span></div>
+        <h1>ИСКУССТВО<br><span class="headline-outline">ПРИГЛАШАТЬ</span><br><span class="headline-yellow">ЛЮДЕЙ<span class="period">.</span></span></h1>
+        <p class="hero-subtitle">Без давления. Без заученных фраз.<br>С уважением, уверенностью и результатом.</p>
+        <p class="hero-small">Практический гайд по приглашениям в <strong>Greenway</strong>. Готовые тексты, голосовые скрипты и пошаговая система для команды <strong>#СуперГерои</strong>.</p>
+        <div class="hero-buttons">
+          <a class="button button-dark" href="#philosophy">ОТКРЫТЬ ГАЙД <svg class="icon"><use href="#i-arrow"></use></svg></a>
+          <a class="button button-text" href="#voice">СМОТРЕТЬ СКРИПТЫ <svg class="icon"><use href="#i-up"></use></svg></a>
+        </div>
+        <div class="hero-meta"><span><strong>10</strong> МОДУЛЕЙ</span><span><strong>07</strong> ШАГОВ</span><span><strong>07</strong> ДНЕЙ ПРАКТИКИ</span></div>
+      </div>
+      <div class="hero-art" aria-label="Декоративная иллюстрация в чёрно-жёлтом стиле">
+        <span class="art-label top">YOUR NEXT LEVEL / 001</span>
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div>
+        <div class="art-star star-one">✳</div><div class="art-star star-two">✳</div>
+        <div class="art-bolt"><svg viewBox="0 0 188 296" fill="none" aria-hidden="true"><path d="M109 7 13 157h78l-13 132 102-172h-75L109 7Z" fill="#FFD400" stroke="#151515" stroke-width="7" stroke-linejoin="round"/></svg></div>
+        <span class="art-circle-text">01 / ПРОСТО НАЧНИ</span>
+        <span class="art-label bottom">#СУПЕРГЕРОИ / MAKE IT HAPPEN ↗</span>
+      </div>
+    </section>
+
+    <div class="mobile-section-strip" aria-label="Быстрый переход">
+      <a href="#philosophy">01 / Принцип</a><a href="#formula">02 / Формула</a><a href="#voice">03 / Скрипты</a><a href="#messages">04 / Сообщения</a><a href="#objections">06 / Возражения</a><a href="#plan">08 / План</a><a href="#checklist">09 / Чек-лист</a>
+    </div>
+
+    <div class="workbook shell">
+      <aside class="side-nav" aria-label="Содержание">
+        <div class="side-inner">
+          <div class="side-overline">НАВИГАЦИЯ ПО ГАЙДУ</div>
+          <nav class="section-nav">
+            <a href="#philosophy" class="active"><span>01</span> Главный принцип</a>
+            <a href="#formula"><span>02</span> Формула приглашения</a>
+            <a href="#voice"><span>03</span> Голосовое сообщение</a>
+            <a href="#messages"><span>04</span> Первое касание</a>
+            <a href="#start"><span>05</span> С чего начать</a>
+            <a href="#objections"><span>06</span> Возражения</a>
+            <a href="#route"><span>07</span> Путь человека</a>
+            <a href="#plan"><span>08</span> План на 7 дней</a>
+            <a href="#checklist"><span>09</span> Чек-лист</a>
+            <a href="#final"><span>10</span> Код команды</a>
+          </nav>
+          <div class="side-quote"><svg class="icon"><use href="#i-bolt"></use></svg><p>НЕ УГОВАРИВАЙ.<br>ПОКАЗЫВАЙ<br>ВОЗМОЖНОСТИ.</p><small>#СУПЕРГЕРОИ</small></div>
+          <div class="side-mini">Основано на разборе скрипта Дмитрия Тишанского (TopMLM), адаптировано для команды Greenway.</div>
+        </div>
+      </aside>
+
+      <div class="main-content">
+        <section id="philosophy" class="chapter" data-chapter="01">
+          <div class="chapter-kicker"><span>01 / МЫШЛЕНИЕ</span><span>ОСНОВА ВСЕГО</span></div>
+          <h2>НЕ ПРОСИ.<br><em>ПРЕДЛАГАЙ.</em></h2>
+          <p class="chapter-intro">Ты не просишь человека прийти к тебе. Ты предлагаешь ему рассмотреть возможность, которой сам уже пользуешься.</p>
+          <div class="comparison">
+            <div class="compare-card compare-no"><div class="compare-label"><span class="compare-icon">✕</span> ПОЗИЦИЯ ПРОСЯЩЕГО</div><p>«Привет! У нас такая классная возможность! Приходи, пожалуйста, на презентацию. Тебе обязательно понравится!»</p><small>Ты пытаешься убедить человека.</small></div>
+            <div class="compare-card compare-yes"><div class="compare-label"><svg class="icon"><use href="#i-check"></use></svg> ПОЗИЦИЯ УВЕРЕННОГО</div><p>«Привет! Я сейчас активно занимаюсь Greenway и собираю небольшую команду. Хочу показать, как всё устроено. Тебе интересно узнать подробнее?»</p><small>Ты предлагаешь возможность на равных.</small></div>
+          </div>
+          <div class="insight"><span class="insight-icon"><svg class="icon"><use href="#i-light"></use></svg></span><div><strong>ЗАПОМНИ ГЛАВНОЕ</strong><p>Твоя задача — не убедить каждого. Твоя задача — найти людей, которым действительно интересно твоё предложение.</p></div></div>
+        </section>
+
+        <section id="formula" class="chapter" data-chapter="02">
+          <div class="chapter-kicker"><span>02 / СИСТЕМА</span><span>7 ЭЛЕМЕНТОВ</span></div>
+          <h2>ФОРМУЛА<br><em>ПРИГЛАШЕНИЯ.</em></h2>
+          <p class="chapter-intro">Хорошее приглашение — это не магические слова, а понятная последовательность мыслей. Вот семь точек, на которых оно строится.</p>
+          <div class="steps-list">
+            <article class="step-card"><span class="step-number">01</span><div><h3>ЛИЧНОЕ ОБРАЩЕНИЕ</h3><p>Называй человека по имени, записывай персональное голосовое, говори своими словами. Никаких массовых пересылок.</p><div class="step-tag">КАЖДОМУ — ИНДИВИДУАЛЬНО</div></div></article>
+            <article class="step-card"><span class="step-number">02</span><div><h3>ТЫ УЖЕ ДЕЙСТВУЕШЬ</h3><p>Расскажи, чем занимаешься прямо сейчас: «Я активно занимаюсь Greenway и собираю команду». Не жди чужого согласия, чтобы начать действовать.</p><div class="step-tag">ПОЗИЦИЯ УВЕРЕННОСТИ</div></div></article>
+            <article class="step-card"><span class="step-number">03</span><div><h3>КОНКРЕТНАЯ ЦЕЛЬ</h3><p>Поделись реальной целью: квалификация, создание команды или желаемый доход. Говори о плане, а не о гарантированных деньгах.</p><div class="step-tag">АМБИЦИИ + ЧЕСТНОСТЬ</div></div></article>
+            <article class="step-card"><span class="step-number">04</span><div><h3>РЕАЛЬНЫЕ РЕЗУЛЬТАТЫ</h3><p>Покажи подтверждённые истории — свои или команды. Не придумывай цифры и не выдавай чужие результаты за типичные.</p><div class="step-tag">ФАКТЫ ВМЕСТО ОБЕЩАНИЙ</div></div></article>
+            <article class="step-card"><span class="step-number">05</span><div><h3>СИСТЕМА И ПОДДЕРЖКА</h3><p>Объясни, что есть обучение, наставники, инструменты, презентации и помощь на старте. Новичок не должен чувствовать себя один на один с неизвестностью.</p><div class="step-tag">ПОНЯТНЫЙ СТАРТ</div></div></article>
+            <article class="step-card"><span class="step-number">06</span><div><h3>КОНКРЕТНЫЙ СЛЕДУЮЩИЙ ШАГ</h3><p>Пригласи на разговор на 20–40 минут, общую презентацию или встречу. Не пытайся рассказать весь маркетинг-план в переписке.</p><div class="step-tag">ПЕРЕХОД К ДИАЛОГУ</div></div></article>
+            <article class="step-card"><span class="step-number">07</span><div><h3>СВОБОДА ВЫБОРА</h3><p>Дай человеку возможность спокойно отказаться. Если берёшь ограниченное число людей на личное сопровождение, говори об этом только тогда, когда это правда.</p><div class="step-tag">БЕЗ ДАВЛЕНИЯ</div></div></article>
+          </div>
+          <div class="statement-band"><span class="band-star">✳</span><p>УВЕРЕННОСТЬ <span>НЕ РАВНА</span> НАВЯЗЧИВОСТИ.</p></div>
+        </section>
+
+        <section id="voice" class="chapter" data-chapter="03">
+          <div class="chapter-kicker"><span>03 / ИНСТРУМЕНТЫ</span><span>ГОТОВО К ПРИМЕНЕНИЮ</span></div>
+          <h2>СКАЖИ ЭТО<br><em>ГОЛОСОМ.</em></h2>
+          <p class="chapter-intro">После положительного ответа запиши персональное голосовое. Говори как с живым человеком — не читай текст по бумажке.</p>
+          <div class="voice-feature"><svg class="icon"><use href="#i-mic"></use></svg><div><strong>45–75 СЕКУНД</strong><span>Оптимальная длительность голосового приглашения</span></div><span class="sound-waves" aria-hidden="true">▂▅▃▇▅▂▆▃</span></div>
+          <div class="script-shell">
+            <div class="script-top"><div><div class="mini-label">КОПИРУЙ • АДАПТИРУЙ • ЗАПИСЫВАЙ</div><h3>ГОТОВЫЙ СКРИПТ</h3></div><span class="script-icon"><svg class="icon"><use href="#i-mic"></use></svg></span></div>
+            <div class="tabs" role="tablist" aria-label="Скрипт по уровню опыта"><button type="button" role="tab" id="tab-pro" aria-selected="true" aria-controls="voice-pro" class="tab is-active" data-tab="voice-pro">ОПЫТНОМУ</button><button type="button" role="tab" id="tab-new" aria-selected="false" aria-controls="voice-new" class="tab" data-tab="voice-new" tabindex="-1">НОВИЧКУ</button></div>
+            <div id="voice-pro" class="script-text tab-panel" role="tabpanel" aria-labelledby="tab-pro">
+              <p>«Слушай, [имя], расскажу немного подробнее.</p>
+              <p>Я сейчас активно занимаюсь Greenway и собираю несколько человек, с которыми хочу плотно поработать.</p>
+              <p>У меня есть определённая цель по доходу и развитию команды, и я понимаю, какие шаги для этого нужно делать.</p>
+              <p>Самое классное, что здесь уже есть готовая система, обучение, инструменты и сильная команда наставников. Не нужно всё придумывать самостоятельно.</p>
+              <p>Я готов помогать людям с первых шагов, приглашениями, презентациями и выстраиванием своей команды.</p>
+              <p>Поэтому, если тебе в принципе интересно рассмотреть дополнительный доход, предлагаю созвониться минут на 30. Я покажу тебе всю суть, расскажу, что здесь нужно делать и какие есть возможности.</p>
+              <p>А дальше уже сам решишь, подходит тебе это или нет. Как тебе такое предложение?»</p>
+            </div>
+            <div id="voice-new" class="script-text tab-panel" role="tabpanel" aria-labelledby="tab-new" hidden>
+              <p>«Слушай, [имя], я сейчас начал активно заниматься Greenway.</p>
+              <p>Мне очень понравилось, что здесь есть готовая система работы, обучение и поддержка опытных людей.</p>
+              <p>Я сейчас сам во всём разбираюсь, прохожу обучение и хочу собрать небольшую команду, чтобы вместе двигаться вперёд.</p>
+              <p>Здесь можно заниматься продуктами, рекомендациями и постепенно выстраивать дополнительный доход.</p>
+              <p>Я хочу тебе предложить просто познакомиться с тем, чем мы занимаемся. Можно созвониться или посмотреть небольшую презентацию.</p>
+              <p>Если заинтересует — расскажу, с чего начать. Если нет — вообще никаких вопросов. Тебе интересно было бы посмотреть?»</p>
+            </div>
+            <div class="script-bottom"><span>ГОВОРИ ЕСТЕСТВЕННО, НЕ ЗАУЧИВАЙ</span><button type="button" class="copy-button" data-copy-active-script><svg class="icon"><use href="#i-copy"></use></svg> СКОПИРОВАТЬ СКРИПТ</button></div>
+          </div>
+          <div class="insight insight-soft"><span class="insight-icon"><svg class="icon"><use href="#i-light"></use></svg></span><div><strong>НЕ ЗАПОМИНАЙ СЛОВО В СЛОВО</strong><p>Запоминай смысл семи блоков: имя → чем занимаешься → цель → результат → система → встреча → свобода выбора.</p></div></div>
+        </section>
+
+        <section id="messages" class="chapter" data-chapter="04">
+          <div class="chapter-kicker"><span>04 / ПЕРВОЕ КАСАНИЕ</span><span>КОРОТКО И ПО ДЕЛУ</span></div>
+          <h2>НАЧНИ<br><em>РАЗГОВОР.</em></h2>
+          <p class="chapter-intro">Первое сообщение должно открывать диалог, а не заменять целую презентацию. Выбери ситуацию и адаптируй текст под человека.</p>
+          <div class="message-grid">
+            <article class="message-card"><div class="message-head"><span class="message-number">01</span><span>ЗНАКОМЫЙ ЧЕЛОВЕК</span></div><p id="message-friend">Привет! Слушай, я сейчас активно занимаюсь Greenway и хочу собрать несколько человек для совместной работы. Подумал про тебя. Тебе вообще было бы интересно рассмотреть дополнительный доход?</p><button class="copy-minor" type="button" data-copy-target="message-friend"><svg class="icon"><use href="#i-copy"></use></svg> КОПИРОВАТЬ</button></article>
+            <article class="message-card"><div class="message-head"><span class="message-number">02</span><span>НЕЗНАКОМЫЙ ЧЕЛОВЕК</span></div><p id="message-cold">Здравствуйте! Увидел вашу страницу и решил написать. Сейчас ищу несколько открытых людей, которым было бы интересно рассмотреть дополнительный доход с телефона, с обучением и поддержкой. Вам в принципе интересно такое направление?</p><button class="copy-minor" type="button" data-copy-target="message-cold"><svg class="icon"><use href="#i-copy"></use></svg> КОПИРОВАТЬ</button></article>
+            <article class="message-card"><div class="message-head"><span class="message-number">03</span><span>ОПЫТНЫЙ СЕТЕВИК</span></div><p id="message-mlm">Привет! Вижу, что ты тоже занимаешься сетевым. Я сейчас активно усиливаю команду в Greenway и ищу людей, которым интересно расти в доходе и строить сильную структуру. Ты в принципе открыт к рассмотрению других возможностей?</p><button class="copy-minor" type="button" data-copy-target="message-mlm"><svg class="icon"><use href="#i-copy"></use></svg> КОПИРОВАТЬ</button></article>
+            <article class="message-card"><div class="message-head"><span class="message-number">04</span><span>ИЩЕТ ПОДРАБОТКУ</span></div><p id="message-work">Здравствуйте! Увидел, что вам интересна тема дополнительного заработка. Я занимаюсь Greenway, у нас есть обучение, готовые инструменты и возможность работать онлайн. Могу коротко рассказать, что нужно делать. Вам интересно?</p><button class="copy-minor" type="button" data-copy-target="message-work"><svg class="icon"><use href="#i-copy"></use></svg> КОПИРОВАТЬ</button></article>
+          </div>
+          <div class="rule-line"><div class="rule-num">01 <span>/ ПРАВИЛО</span></div><p>НЕ ОТПРАВЛЯЙ НЕЗНАКОМЫМ ЛЮДЯМ ДЛИННЫЕ ТЕКСТЫ, ССЫЛКИ И ГОЛОСОВЫЕ БЕЗ СОГЛАСИЯ.</p></div>
+        </section>
+
+        <section id="start" class="chapter" data-chapter="05">
+          <div class="chapter-kicker"><span>05 / ДЛЯ НОВИЧКА</span><span>ТВОЯ ТОЧКА ОПОРЫ</span></div>
+          <h2>ПОКА НЕТ<br><em>РЕЗУЛЬТАТОВ?</em></h2>
+          <p class="chapter-intro">Не нужно ждать большой квалификации, чтобы начинать приглашать. Твоя сила на старте — система и люди, с которыми ты работаешь.</p>
+          <div class="start-hero"><span class="start-star">✳</span><h3>ТЕБЕ НЕ НУЖНО<br>ИЗОБРАЖАТЬ<br><i>ЭКСПЕРТА.</i></h3><p>Достаточно честно рассказывать, чему учишься, какую поддержку получаешь и что можешь предложить следующему человеку.</p></div>
+          <div class="benefit-grid"><div><span>01</span><strong>Обучение</strong><p>Пошаговые материалы и командные разборы</p></div><div><span>02</span><strong>Наставники</strong><p>Опытные люди, к которым можно обратиться</p></div><div><span>03</span><strong>Инструменты</strong><p>Готовые материалы для знакомства и работы</p></div><div><span>04</span><strong>Поддержка</strong><p>Помощь с первыми шагами и приглашениями</p></div></div>
+          <div class="note-stroke"><strong>ВАЖНО:</strong> Не выдавай достижения наставников за свои. Говори только о той помощи, которую команда действительно может предоставить.</div>
+        </section>
+
+        <section id="objections" class="chapter" data-chapter="06">
+          <div class="chapter-kicker"><span>06 / ДИАЛОГ</span><span>ГОТОВЫЕ ОТВЕТЫ</span></div>
+          <h2>А ЕСЛИ<br><em>СКАЖУТ «НЕТ»?</em></h2>
+          <p class="chapter-intro">Возражение — не всегда отказ. Иногда человеку не хватает информации. Отвечай спокойно, без споров и давления.</p>
+          <div class="accordion" id="objections-list">
+            <details open><summary><span class="question-index">01</span><strong>«ЭТО СЕТЕВОЙ?»</strong><svg class="icon"><use href="#i-chevron"></use></svg></summary><div class="accordion-content"><p id="reply-1">Да, это сетевой бизнес с Greenway. Здесь можно заниматься продуктами и при желании строить свою команду. Я могу показать, как это работает на практике.</p><button type="button" class="copy-minor" data-copy-target="reply-1"><svg class="icon"><use href="#i-copy"></use></svg> КОПИРОВАТЬ ОТВЕТ</button></div></details>
+            <details><summary><span class="question-index">02</span><strong>«У МЕНЯ НЕТ ВРЕМЕНИ»</strong><svg class="icon"><use href="#i-chevron"></use></svg></summary><div class="accordion-content"><p id="reply-2">Понимаю. Поэтому сначала предлагаю просто посмотреть, что нужно делать. А дальше уже решишь, реально ли тебе совмещать это со своими делами.</p><button type="button" class="copy-minor" data-copy-target="reply-2"><svg class="icon"><use href="#i-copy"></use></svg> КОПИРОВАТЬ ОТВЕТ</button></div></details>
+            <details><summary><span class="question-index">03</span><strong>«А СКОЛЬКО МОЖНО ЗАРАБОТАТЬ?»</strong><svg class="icon"><use href="#i-chevron"></use></svg></summary><div class="accordion-content"><p id="reply-3">Здесь нет фиксированной зарплаты. Доход зависит от результата работы. Я могу показать маркетинг-план и реальные примеры, чтобы было понятно, за какие действия начисляется вознаграждение.</p><button type="button" class="copy-minor" data-copy-target="reply-3"><svg class="icon"><use href="#i-copy"></use></svg> КОПИРОВАТЬ ОТВЕТ</button></div></details>
+            <details><summary><span class="question-index">04</span><strong>«МНЕ НУЖНО ПОДУМАТЬ»</strong><svg class="icon"><use href="#i-chevron"></use></svg></summary><div class="accordion-content"><p id="reply-4">Конечно! Скажи, пожалуйста, остались вопросы, в которых нужно разобраться, или просто хочешь всё спокойно обдумать?</p><button type="button" class="copy-minor" data-copy-target="reply-4"><svg class="icon"><use href="#i-copy"></use></svg> КОПИРОВАТЬ ОТВЕТ</button></div></details>
+            <details><summary><span class="question-index">05</span><strong>«МНЕ НЕИНТЕРЕСНО»</strong><svg class="icon"><use href="#i-chevron"></use></svg></summary><div class="accordion-content"><p id="reply-5">Хорошо, спасибо, что ответил! Если когда-нибудь тема станет актуальной, буду рад пообщаться.</p><button type="button" class="copy-minor" data-copy-target="reply-5"><svg class="icon"><use href="#i-copy"></use></svg> КОПИРОВАТЬ ОТВЕТ</button></div></details>
+          </div>
+          <div class="insight"><span class="insight-icon"><svg class="icon"><use href="#i-chat"></use></svg></span><div><strong>УВАЖЕНИЕ ВАЖНЕЕ РЕГИСТРАЦИИ</strong><p>Не спорь и не убеждай собеседника, что он неправ. Уважение к решению человека помогает сохранять доверие.</p></div></div>
+        </section>
+
+        <section id="route" class="chapter" data-chapter="07">
+          <div class="chapter-kicker"><span>07 / ЛОГИКА РАБОТЫ</span><span>ОТ ПЕРВОГО ПРИВЕТ ДО СТАРТА</span></div>
+          <h2>ПУТЬ<br><em>ЧЕЛОВЕКА.</em></h2>
+          <p class="chapter-intro">Не пытайся перепрыгнуть сразу к регистрации. Каждый этап помогает человеку осознанно принять решение.</p>
+          <div class="route-list">
+            <div class="route-item"><span class="route-bubble">01</span><div><small>ПЕРВЫЙ КОНТАКТ</small><h3>НАЧНИ ДИАЛОГ</h3><p>Выясни, интересна ли человеку тема дополнительного дохода.</p></div></div>
+            <div class="route-item"><span class="route-bubble">02</span><div><small>ИНТЕРЕС</small><h3>РАССКАЖИ КОРОТКО</h3><p>Объясни, чем занимаешься, и предложи узнать подробнее.</p></div></div>
+            <div class="route-item"><span class="route-bubble">03</span><div><small>ПРЕЗЕНТАЦИЯ</small><h3>ПОКАЖИ СИСТЕМУ</h3><p>Проведи созвон, личную встречу или пригласи на презентацию.</p></div></div>
+            <div class="route-item"><span class="route-bubble">04</span><div><small>ОБРАТНАЯ СВЯЗЬ</small><h3>ВЫСЛУШАЙ ЧЕЛОВЕКА</h3><p>Узнай впечатления, ответь на вопросы, не торопи с решением.</p></div></div>
+            <div class="route-item"><span class="route-bubble">05</span><div><small>СТАРТ</small><h3>ПОМОГИ НА ПЕРВЫХ ШАГАХ</h3><p>Если человек присоединяется, помоги с обучением и первыми действиями.</p></div></div>
+          </div>
+          <div class="statement-band statement-band-light"><span class="band-star">↗</span><p>НЕ ПРОСТО ПРИГЛАСИ.<br><span>ПОМОГИ РАЗОБРАТЬСЯ.</span></p></div>
+        </section>
+
+        <section id="plan" class="chapter" data-chapter="08">
+          <div class="chapter-kicker"><span>08 / ПРАКТИКА</span><span>ПЕРВАЯ НЕДЕЛЯ</span></div>
+          <h2>7 ДНЕЙ.<br><em>7 ДЕЙСТВИЙ.</em></h2>
+          <p class="chapter-intro">Небольшая практика для каждого партнёра. Отмечай выполненные задания — прогресс сохраняется в этом браузере.</p>
+          <div class="tracker-head"><div><span class="tracker-overline">ТВОЙ ПРОГРЕСС</span><strong><span id="plan-count">0</span><span class="tracker-muted">/ 7 ДНЕЙ</span></strong></div><div class="tracker-progress" role="progressbar" aria-label="Прогресс плана" aria-valuemin="0" aria-valuemax="7" aria-valuenow="0" id="plan-progress"><span></span></div></div>
+          <div class="daily-list">
+            <label class="day-card"><input type="checkbox" data-day="1"><span class="day-check"><svg class="icon"><use href="#i-check"></use></svg></span><span class="day-num">ДЕНЬ 01</span><span class="day-info"><strong>ОПРЕДЕЛИ ЦЕЛЬ</strong><small>Запиши, зачем ты занимаешься Greenway, чего хочешь достичь и сколько времени готов выделять.</small></span></label>
+            <label class="day-card"><input type="checkbox" data-day="2"><span class="day-check"><svg class="icon"><use href="#i-check"></use></svg></span><span class="day-num">ДЕНЬ 02</span><span class="day-info"><strong>СОСТАВЬ СПИСОК</strong><small>Подумай, кому может быть интересно предложение. Не решай за человека заранее.</small></span></label>
+            <label class="day-card"><input type="checkbox" data-day="3"><span class="day-check"><svg class="icon"><use href="#i-check"></use></svg></span><span class="day-num">ДЕНЬ 03</span><span class="day-info"><strong>ПЕРВЫЕ ПРИГЛАШЕНИЯ</strong><small>Напиши пять персональных сообщений и адаптируй их под каждого собеседника.</small></span></label>
+            <label class="day-card"><input type="checkbox" data-day="4"><span class="day-check"><svg class="icon"><use href="#i-check"></use></svg></span><span class="day-num">ДЕНЬ 04</span><span class="day-info"><strong>ЗАПИШИ ГОЛОСОВЫЕ</strong><small>Ответившим с интересом отправь персональные голосовые по формуле из гайда.</small></span></label>
+            <label class="day-card"><input type="checkbox" data-day="5"><span class="day-check"><svg class="icon"><use href="#i-check"></use></svg></span><span class="day-num">ДЕНЬ 05</span><span class="day-info"><strong>ПРОВЕДИ ПРЕЗЕНТАЦИИ</strong><small>Назначь личные встречи или пригласи заинтересованных на командную презентацию.</small></span></label>
+            <label class="day-card"><input type="checkbox" data-day="6"><span class="day-check"><svg class="icon"><use href="#i-check"></use></svg></span><span class="day-num">ДЕНЬ 06</span><span class="day-info"><strong>РАЗБЕРИ ОПЫТ</strong><small>Обсуди вопросы, ответы и сложные ситуации с наставником.</small></span></label>
+            <label class="day-card"><input type="checkbox" data-day="7"><span class="day-check"><svg class="icon"><use href="#i-check"></use></svg></span><span class="day-num">ДЕНЬ 07</span><span class="day-info"><strong>ПОДВЕДИ ИТОГИ</strong><small>Оцени диалоги, проведённые встречи и сформируй план на следующую неделю.</small></span></label>
+          </div>
+          <div class="measure-box"><strong>ЧТО ОТСЛЕЖИВАТЬ</strong><span>Приглашения</span><span>Ответы</span><span>Интерес</span><span>Встречи</span><span>Осознанные старты</span></div>
+        </section>
+
+        <section id="checklist" class="chapter" data-chapter="09">
+          <div class="chapter-kicker"><span>09 / ПРОВЕРКА</span><span>ПЕРЕД ОТПРАВКОЙ</span></div>
+          <h2>ЧЕК-ЛИСТ<br><em>ПРИГЛАШЕНИЯ.</em></h2>
+          <p class="chapter-intro">Девять простых вопросов, которые помогут проверить качество сообщения до отправки. Отмечай каждый пункт.</p>
+          <div class="checklist-panel">
+            <div class="checklist-header"><span>КАЧЕСТВО ТВОЕГО СООБЩЕНИЯ</span><strong><span id="check-count">0</span> / 9</strong></div>
+            <div class="checklist-items">
+              <label><input type="checkbox" data-check="1"><span class="checkmark"><svg class="icon"><use href="#i-check"></use></svg></span><span>Я обращаюсь к человеку лично.</span></label>
+              <label><input type="checkbox" data-check="2"><span class="checkmark"><svg class="icon"><use href="#i-check"></use></svg></span><span>Моё сообщение звучит живо и естественно.</span></label>
+              <label><input type="checkbox" data-check="3"><span class="checkmark"><svg class="icon"><use href="#i-check"></use></svg></span><span>Я уверенно рассказываю, чем занимаюсь.</span></label>
+              <label><input type="checkbox" data-check="4"><span class="checkmark"><svg class="icon"><use href="#i-check"></use></svg></span><span>У меня есть понятная личная цель.</span></label>
+              <label><input type="checkbox" data-check="5"><span class="checkmark"><svg class="icon"><use href="#i-check"></use></svg></span><span>Я использую только реальные результаты.</span></label>
+              <label><input type="checkbox" data-check="6"><span class="checkmark"><svg class="icon"><use href="#i-check"></use></svg></span><span>Я могу объяснить, какая есть поддержка.</span></label>
+              <label><input type="checkbox" data-check="7"><span class="checkmark"><svg class="icon"><use href="#i-check"></use></svg></span><span>Я предлагаю понятный следующий шаг.</span></label>
+              <label><input type="checkbox" data-check="8"><span class="checkmark"><svg class="icon"><use href="#i-check"></use></svg></span><span>Я уважаю право человека отказаться.</span></label>
+              <label><input type="checkbox" data-check="9"><span class="checkmark"><svg class="icon"><use href="#i-check"></use></svg></span><span>Я не обещаю гарантированный заработок.</span></label>
+            </div>
+            <div class="checklist-footer"><span id="check-status">Отмечай пункты по мере готовности</span><button id="reset-checks" type="button">СБРОСИТЬ <svg class="icon"><use href="#i-arrow"></use></svg></button></div>
+          </div>
+        </section>
+
+        <section id="final" class="chapter final-chapter" data-chapter="10">
+          <div class="chapter-kicker"><span>10 / ДНК КОМАНДЫ</span><span>ЗАПОМНИ ЭТО</span></div>
+          <h2>НАШ КОД.<br><em>НАШ ПОДХОД.</em></h2>
+          <div class="manifesto">
+            <span class="manifesto-top">#СУПЕРГЕРОИ — НАША ФИЛОСОФИЯ</span>
+            <p>НАМ НЕ НУЖНЫ<br><s>ТЫСЯЧИ СЛУЧАЙНЫХ</s><br><span>ЛЮДЕЙ.</span></p>
+            <div class="manifesto-line"></div>
+            <p class="manifesto-secondary">НАМ НУЖНЫ ТЕ, КОМУ ДЕЙСТВИТЕЛЬНО ИНТЕРЕСНО ТО, ЧТО МЫ ДЕЛАЕМ.</p>
+            <span class="manifesto-foot">СИЛЬНЫЕ ЛЮДИ / СИЛЬНАЯ КОМАНДА</span>
+          </div>
+          <div class="principles"><div><span>01</span><p>НЕ УГОВАРИВАЙ.<br><strong>ПОКАЗЫВАЙ ВОЗМОЖНОСТИ.</strong></p></div><div><span>02</span><p>НЕ ОБЕЩАЙ РЕЗУЛЬТАТ.<br><strong>ДАВАЙ ИНСТРУМЕНТЫ.</strong></p></div><div><span>03</span><p>НЕ ПРОСТО ПРИГЛАШАЙ.<br><strong>ПОМОГАЙ РАСТИ.</strong></p></div></div>
+          <div class="last-action"><div><span>ТВОЁ ЗАДАНИЕ НА СЕГОДНЯ</span><h3>НАЧНИ С <i>ПЯТИ.</i></h3><p>Выбери пять человек, напиши каждому персонально, ответившим с интересом запиши голосовое и предложи встречу. Если сложно — обратись к наставнику.</p><a class="button button-dark" href="#messages">ВЗЯТЬ ГОТОВЫЙ ТЕКСТ <svg class="icon"><use href="#i-arrow"></use></svg></a></div><div class="last-action-number">05<span>→</span></div></div>
+          <p class="disclaimer">Этот гайд — обучающий материал. Примеры доходов, цели и истории партнёров не гарантируют аналогичных результатов. Реальный доход зависит от личных действий, времени, навыков и других факторов. Соблюдайте правила Greenway и уважайте выбор собеседника.</p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer"><div class="shell footer-inner"><div class="footer-logo"><span class="brand-mark"><svg class="icon"><use href="#i-bolt"></use></svg></span><div><strong>#СУПЕРГЕРОИ</strong><small>GREENWAY · TEAM EDUCATION</small></div></div><p>СИЛЬНЫЕ ЛЮДИ. СИЛЬНАЯ КОМАНДА. ОБЩИЕ ЦЕЛИ.</p><a href="#top">НАВЕРХ ↑</a></div></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+  <div class="mobile-bottom"><span id="mobile-current">01 / ГЛАВНЫЙ ПРИНЦИП</span><button type="button" id="mobile-bottom-menu"><svg class="icon"><use href="#i-menu"></use></svg> СОДЕРЖАНИЕ</button></div>
+</body>
+</html>
